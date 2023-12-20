@@ -1,0 +1,13 @@
+.tweet_cont {
+  display: flex;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tweet_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
