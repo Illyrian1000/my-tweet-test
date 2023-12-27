@@ -8,9 +8,9 @@ export default function Tweet() {
 
   const [profileImage, setProfileImage] = useState();
 
-  const [profileUsername, setProfileUsername] = useState("Ilirjan Prevazi");
+  const [profileUsername, setProfileUsername] = useState("John Doe");
 
-  const [profileHandle, setProfileHandle] = useState("prevazi");
+  const [profileHandle, setProfileHandle] = useState("doe_j");
 
   const [profileTweet, setProfileTweet] = useState(
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum lectus lorem, semper rhoncus dolor venenatis quis."

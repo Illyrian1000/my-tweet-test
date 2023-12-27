@@ -1,6 +1,7 @@
 .tweet_input {
-  width: max-content;
+  flex: 1;
   margin: 0px 40px;
+  max-height: 800px;
 }
 
 .input_containers {
@@ -12,6 +13,11 @@
 
 .input_containers:first-child {
   margin-top: 0;
+  /* padding: 10px 5px; */
+}
+
+.input_containers {
+  /* padding-left: 5px; */
 }
 
 .input_containers > input,
@@ -21,6 +27,15 @@
   padding: 5px 5px 5px 10px;
 }
 
+textarea {
+  max-width: 500px;
+  min-width: 500px;
+
+  max-height: 150px;
+  min-height: 150px;
+  height: fit-content;
+}
+
 .input_containers > input {
   height: 25px;
 }
@@ -28,10 +43,41 @@
 #profile_image {
   border: none;
   padding-left: 0px;
+  height: 30px;
+  font-size: 14px;
+}
+
+#profile_image::file-selector-button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 0px solid black;
+  background-color: lightgray;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#profile_image::file-selector-button:hover {
+  box-shadow: 2px 2px 5px -2px lightgray;
 }
 
 @media only screen and (max-width: 768px) {
   .tweet_input {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin: 0;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input_containers {
+    width: 100%;
+  }
+
+  .input_containers:last-child {
+    margin-bottom: 40px;
   }
 }

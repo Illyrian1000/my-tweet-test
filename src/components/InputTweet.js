@@ -23,21 +23,16 @@ export default function InputTweet(props) {
     props.tweet(tweetText);
   }
 
-  function handleImageDownload() {
-    props.downloadImage();
-  }
-
   return (
     <div className="tweet_input">
       <div className="input_containers">
-        <label htmlFor="profile_image">Upload image or insert image URL</label>
+        <label htmlFor="profile_image">Upload image</label>
         <input
           id="profile_image"
           type="file"
           accept="image/*"
           onChange={handleImageChange}
         />
-        <input type="text" placeholder="image URL" />
       </div>
       <div className="input_containers">
         <label htmlFor="username">Username</label>
@@ -62,8 +57,7 @@ export default function InputTweet(props) {
         <textarea
           placeholder="Today is a beautiful day..."
           name="Tweet"
-          id=""
-          cols="40"
+          cols="50"
           rows="3"
           onChange={handleTweetChange}
         ></textarea>

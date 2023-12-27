@@ -18,7 +18,7 @@ header > ul {
 }
 
 ul > li {
-  transition: scale ease-in 1s;
+  transition: scale ease 0.3s;
 }
 ul > li:hover {
   scale: 1.05;

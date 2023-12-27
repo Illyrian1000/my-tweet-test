@@ -1,12 +1,13 @@
 import "./OutputTweet.css";
 import html2canvas from "html2canvas";
 
-const profileImage = "src/assets/profile.png";
-const commentImg = "src/assets/icons/comment.png";
-const retweetImg = "src/assets/icons/retweet.png";
-const likeImg = "src/assets/icons/like.png";
-const bookmarkImg = "src/assets/icons/bookmark.png";
-const shareImg = "src/assets/icons/share.png";
+const profileImage = "assets/profile.png";
+const commentImg = "assets/icons/comment.png";
+const retweetImg = "assets/icons/retweet.png";
+const likeImg = "assets/icons/like.png";
+const bookmarkImg = "assets/icons/bookmark.png";
+const shareImg = "assets/icons/share.png";
+const verifiedImg = "assets/icons/verified.png";
 
 export default function OutputTweet(props) {
   const handleDownloadImage = () => {
@@ -40,7 +41,10 @@ export default function OutputTweet(props) {
               className="profile_picture"
             />
             <div>
-              <p className="output_username">{props.outputUsername}</p>
+              <p className="output_username">
+                {props.outputUsername}
+                <img id="verified_icon" src={verifiedImg} />
+              </p>
               <p className="output_handle">@{props.outputHandle}</p>
             </div>
           </div>
